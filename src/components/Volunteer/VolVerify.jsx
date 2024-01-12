@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { MyContext } from "../../Contexts/AllContext";
 import { useContext, useState } from "react";
 import axios from "axios";
+import logo from '../../assets/logo.png'
 
 const VolVerify = () => {
 
@@ -24,7 +25,7 @@ const VolVerify = () => {
   return (
     <div className="container verify-parent">
       <div>
-        <p className="circle"></p>
+      <img src={logo} className="circle" />
         <h6 className="fw-bold" style={{ color: "#000" }}>
           HelpYours!
         </h6>

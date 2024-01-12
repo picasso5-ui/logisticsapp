@@ -2,16 +2,18 @@ import axios from "axios";
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { MyContext } from "../../Contexts/AllContext";
+import logo from '../../assets/logo.png'
 
 const Login = () => {
 
   const {setLoginData} = useContext(MyContext)
-  const [username,setUsername] = useState()
-  const [email,setEmail] = useState()
-  const [password,setPassword] = useState()
-  const [confirmpassword,setConfirmPassword] = useState()
-  const [location,setLocation] = useState()
-  const [contact,setContact] = useState()
+  const [username,setUsername] = useState('')
+  const [email,setEmail] = useState('')
+  const [password,setPassword] = useState('')
+  const [confirmpassword,setConfirmPassword] = useState('')
+  const [location,setLocation] = useState('')
+  const [contact,setContact] = useState('')
+  
   const navigate = useNavigate()
 
 
@@ -29,7 +31,7 @@ const Login = () => {
   return (
     <>
       <div  className="sign-up container d-flex flex-column justify-content-center align-items-center pt-3">
-        <div className="circle"></div>
+      <img src={logo} className="circle" />
         <div className="text-center">
           <h4 className="fw-bold mb-4">HelpYours!</h4>
         </div>

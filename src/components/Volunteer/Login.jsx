@@ -1,9 +1,10 @@
 import {Link} from 'react-router-dom'
+import logo from '../../assets/logo.png'
 
 const Login = () => {
     return ( 
         <div className="container d-flex flex-column justify-content-center align-items-center pt-5">
-        <div className="circle"></div>
+        <img src={logo} className="circle" />
         <div className="text-center">
           <h4 className="fw-bold">HelpYours!</h4>
         </div>

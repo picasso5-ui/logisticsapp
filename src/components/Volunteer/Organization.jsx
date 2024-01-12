@@ -1,27 +1,33 @@
-import React, { useContext, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleArrowRight } from "@fortawesome/free-solid-svg-icons";
-
-import { Link, useNavigate } from "react-router-dom";
-import { MyContext } from "../../Contexts/AllContext";
+import React, { useContext, useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircleArrowRight } from '@fortawesome/free-solid-svg-icons'
+import logo from '../../assets/logo.png'
+import { Link, useNavigate } from 'react-router-dom'
+import { MyContext } from '../../Contexts/AllContext'
 
 const Organization = () => {
-
   const nevigate = useNavigate()
 
-  const {setOrganizationName,setOrganizationHead,setWhatYouProvide,setAboutOrganization,setNumberOfWorkers,setExperience,setLicence} = useContext(MyContext)
+  const {
+    setOrganizationName,
+    setOrganizationHead,
+    setWhatYouProvide,
+    setAboutOrganization,
+    setNumberOfWorkers,
+    setExperience,
+    setLicence,
+  } = useContext(MyContext)
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     nevigate('/volcontact')
-
   }
   return (
     <div className="d-flex container  vh-100 flex-column justify-content-center align-items-center">
-      <div className="circle"></div>
+      <img src={logo} className="circle" />
       <strong>HelpYours !</strong>
       <div className="organization-form mt-3 d-flex flex-column justify-content-start p-3">
-        <strong className="mb-3" style={{ fontSize: "24px" }}>
+        <strong className="mb-3" style={{ fontSize: '24px' }}>
           Organization Details
         </strong>
         <form action="#">
@@ -29,37 +35,39 @@ const Organization = () => {
             <label
               htmlFor="organizationName"
               className=""
-              style={{ fontSize: "19px" }}
+              style={{ fontSize: '19px' }}
             >
-              Organization Name{" "}
+              Organization Name{' '}
             </label>
-            <input 
-            type="text" 
-            className="border-b container" 
-            name="organizationName" 
-            onChange={(e) => setOrganizationName(e.target.value)} />
+            <input
+              type="text"
+              className="border-b container"
+              name="organizationName"
+              onChange={(e) => setOrganizationName(e.target.value)}
+            />
           </div>
           <div className="d-flex flex-column mb-2">
             <label
               htmlFor="whatYouProvide"
               className=""
-              style={{ fontSize: "19px" }}
+              style={{ fontSize: '19px' }}
             >
               What You Provide
             </label>
-            <input 
-            type="text" 
-            className="border-b container" 
-            name="whatYouProvide"
-            onChange={(e) => setWhatYouProvide(e.target.value)} />
+            <input
+              type="text"
+              className="border-b container"
+              name="whatYouProvide"
+              onChange={(e) => setWhatYouProvide(e.target.value)}
+            />
           </div>
           <div className="d-flex flex-column mb-2">
             <label
               htmlFor="aboutOrganiztion"
               className=""
-              style={{ fontSize: "19px" }}
+              style={{ fontSize: '19px' }}
             >
-              About Organization{" "}
+              About Organization{' '}
             </label>
             <input
               type="text"
@@ -72,9 +80,9 @@ const Organization = () => {
             <label
               htmlFor="organizationHead"
               className=""
-              style={{ fontSize: "19px" }}
+              style={{ fontSize: '19px' }}
             >
-              Organization Head{" "}
+              Organization Head{' '}
             </label>
             <input
               type="text"
@@ -87,9 +95,9 @@ const Organization = () => {
             <label
               htmlFor="numberOfWorkers"
               className=""
-              style={{ fontSize: "19px" }}
+              style={{ fontSize: '19px' }}
             >
-              Number of Workers{" "}
+              Number of Workers{' '}
             </label>
             <input
               type="text"
@@ -102,9 +110,9 @@ const Organization = () => {
             <label
               htmlFor="experience"
               className=""
-              style={{ fontSize: "19px" }}
+              style={{ fontSize: '19px' }}
             >
-              Experiance{" "}
+              Experiance{' '}
             </label>
             <input
               type="text"
@@ -114,12 +122,8 @@ const Organization = () => {
             />
           </div>
           <div className="d-flex flex-column mb-2">
-            <label
-              htmlFor="licence"
-              className=""
-              style={{ fontSize: "19px" }}
-            >
-              Licence Id{" "}
+            <label htmlFor="licence" className="" style={{ fontSize: '19px' }}>
+              Licence Id{' '}
             </label>
             <input
               type="text"
@@ -128,121 +132,24 @@ const Organization = () => {
               onChange={(e) => setLicence(e.target.value)}
             />
           </div>
-          <Link to="/volcontact"><button type="" placeholder="Submit" className="container-fluid mt-3"><FontAwesomeIcon icon={faCircleArrowRight} size="2x" style={{ color: '#26ABB4' }} /></button></Link>
-          <div className="row">
-            <div className="d-flex flex-column  col-12 mb-2">
-              <label
-                htmlFor="organization-name"
-                className=""
-                style={{ fontSize: "19px" }}
-              >
-                Organization Name{" "}
-              </label>
-              <input type="text" className="border-b container " />
-            </div>
-            <div className="d-flex flex-column col-12 mb-2">
-              <label
-                htmlFor="organization-name"
-                className=""
-                style={{ fontSize: "19px" }}
-              >
-                Area Of Organization
-              </label>
-              <input type="text" className="border-b container" />
-            </div>
-            <div className="d-flex flex-column col-12 mb-2">
-              <label
-                htmlFor="organization-name"
-                className=""
-                style={{ fontSize: "19px" }}
-              >
-                About Organization{" "}
-              </label>
-              <input
-                type="text"
-                name="organization-name"
-                className="border-b container"
+          <Link to="/volcontact">
+            <button
+              type=""
+              placeholder="Submit"
+              className="container-fluid mt-3"
+            >
+              <FontAwesomeIcon
+                icon={faCircleArrowRight}
+                size="2x"
+                style={{ color: '#26ABB4' }}
               />
-            </div>
-            <div className="d-flex flex-column col-12 mb-2">
-              <label
-                htmlFor="organization-name"
-                className=""
-                style={{ fontSize: "19px" }}
-              >
-                Organization Head{" "}
-              </label>
-              <input
-                type="text"
-                name="organization-name"
-                className="border-b container"
-              />
-            </div>
-            <div className="d-flex flex-column col-12 mb-2">
-              <label
-                htmlFor="organization-name"
-                className=""
-                style={{ fontSize: "19px" }}
-              >
-                Number of Workers{" "}
-              </label>
-              <input
-                type="text"
-                name="organization-name"
-                className="border-b container"
-              />
-            </div>
-            <div className="d-flex flex-column col-12 mb-2">
-              <label
-                htmlFor="organization-name"
-                className=""
-                style={{ fontSize: "19px" }}
-              >
-                Experiance{" "}
-              </label>
-              <input
-                type="text"
-                name="organization-name"
-                className="border-b container"
-              />
-            </div>
-            <div className="d-flex flex-column col-12 ">
-              <label
-                htmlFor="organization-name"
-                className=""
-                style={{ fontSize: "19px" }}
-              >
-                Licence Id{" "}
-              </label>
-              <input
-                type="text"
-                name="organization-name"
-                className="border-b container"
-              />
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="col-12 mt-3">
-              <Link to="/volcontact">
-                <button
-                  type=""
-                  placeholder="Submit"
-                  className="container-fluid mt-3"
-                >
-                  <FontAwesomeIcon
-                    icon={faCircleArrowRight}
-                    size="2x"
-                    style={{ color: "#26ABB4" }}
-                  />
-                </button>
-              </Link>
-            </div>
-          </div>
+            </button>
+          </Link>
+         
         </form>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Organization;
+export default Organization

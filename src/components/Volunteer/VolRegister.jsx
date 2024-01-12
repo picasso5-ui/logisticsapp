@@ -2,7 +2,8 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { MyContext } from "../../Contexts/AllContext";
-import io from 'socket.io-client';
+// import io from 'socket.io-client';
+import logo from '../../assets/logo.png'
 
 const VolRegister = () => {
   const {setUsername,setEmail,setPassword,setConfirmPassword} = useContext(MyContext)
@@ -50,7 +51,7 @@ const VolRegister = () => {
   return (
     <>
       <div  className="vol-reg container d-flex flex-column justify-content-center align-items-center pt-3">
-        <div className="circle"></div>
+      <img src={logo} className="circle" />
         <div className="text-center">
           <h4 className="fw-bold mb-4">HelpYours!</h4>
         </div>
